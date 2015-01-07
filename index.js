@@ -18,7 +18,7 @@ function documentWrite(options) {
 
         var contents = file.contents.toString();
         // remove comment
-        contents = contents.replace(/\/\/.*(?=\n)/g, '').replace(/\/\*.*?\*\//g, '');
+        contents = contents.replace(/\/\/\s*document\.write.*(?=\n)/g, '').replace(/\/\*+\s*document\.write.*?\*\//g, '');
 
         contents = contents.replace(/document\.write\(.*?src=[\'\"]?([^\'\"]+)[\'\"]?.*?\);?/g, function(str, path) {
             // ignore http link
