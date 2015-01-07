@@ -7,7 +7,7 @@ const PLUGIN_NAME = 'gulp-document-write';
 
 function documentWrite(options) {
     options = options || {
-        'context': './web'
+        'context': '.'
     };
 
     return through.obj(function(file, enc, cb) {
