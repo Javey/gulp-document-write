@@ -1,0 +1,18 @@
+{
+  "name": "gulp-document-write",
+  "version": "0.0.1",
+  "description": "Merge script file by document.write",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "author": "Javey <jiawei23716@sina.com>",
+  "dependencies": {
+    "through2": "~0.6.3",
+    "gulp-util": "~3.0.1"
+  },
+  "devDependencies": {
+    "gulp": "~3.8.10"
+  }
+}
