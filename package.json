@@ -1,6 +1,6 @@
 {
   "name": "gulp-document-write",
-  "version": "0.0.2",
+  "version": "0.0.4",
   "description": "Merge script file by document.write",
   "main": "index.js",
   "repository": {
