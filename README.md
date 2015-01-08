@@ -2,6 +2,11 @@
 
 Merge script files by document.write use gulp.
 
+# Features
+
+1. Support javascript comment.
+2. Support nested document.write. Process recursively.
+
 # Usage
 
 see example [gulpfile](https://github.com/Javey/gulp-document-write/blob/master/test/gulpfile.js)
