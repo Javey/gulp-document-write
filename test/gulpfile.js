@@ -4,7 +4,8 @@ var gulp = require('gulp'),
 gulp.task('default', function() {
     gulp.src('./web/**/*.js')
         .pipe(documentWrite({
-            context: './web' // specify webroot if document.write absolute path
+            context: './web', // Specify webroot if document.write absolute path. Default: process.cwd()
+            relativeTo: './web' // Specify relative to which path. Default: the file.path
         }))
         .pipe(gulp.dest('./build'));
 });

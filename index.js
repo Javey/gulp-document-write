@@ -7,7 +7,8 @@ const PLUGIN_NAME = 'gulp-document-write';
 
 function documentWrite(options) {
     options = options || {
-        'context': '.'
+        'context': '.',
+        'relativeTo': ''
     };
 
     return through.obj(function(file, enc, cb) {
@@ -36,7 +37,7 @@ function replace(contents, options, filePath) {
         if (path.charAt(0) === '/') {
             path = Path.join(Path.resolve(options.context), path);
         } else {
-            path = Path.resolve(Path.dirname(filePath), path)
+            path = Path.resolve(options.relativeTo || Path.dirname(filePath), path)
         }
         if (fs.existsSync(path)) {
             // replace recursively
